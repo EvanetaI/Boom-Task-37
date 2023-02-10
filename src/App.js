@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
-  const [text, setText] = useState("")
+  const items = JSON.parse(localStorage.getItem('note'));
+  const [text, setText] = useState(items)
 
   const update = (e) => {
     setText(e.target.value)
